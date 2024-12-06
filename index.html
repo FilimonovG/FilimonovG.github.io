@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Киногерои</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+		<link rel="icon" type="image/png" href="img/logo.png">
+		<script src="js/script.js"></script>
+
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width">
+	</head>
+
+	<body >
+
+		<header class="header">
+			<div class="header__content">
+				<img class="header-logo" src="img/logo.png">
+				<a href="index.html" class="content__link">Главная</a>
+				<div class="drop-down">Герои фильмов
+					<a href="" class="content__link"></a>
+					<div class="drop-down__content">
+						<div class="column">
+							<a href="src/iron-man.html">Железный человек</a>
+							<a href="src/terminator.html">Терминатор</a>
+							<a href="src/jack-sparrow.html">Джек Воробей</a>
+							<a href="src/anakin-skywalker.html">Люк Скайуокер</a>
+						</div>
+						<div class="column">
+							<a href="#">Фродо Беггинс</a>
+							<a href="#">Гэндальф</a>
+							<a href="#">Гарри Поттер</a>
+						</div>
+					</div>
+				</div>
+				<div class="drop-down">Герои сериалов
+					<a href="" class="content__link"></a>
+					<div class="drop-down__content">
+						<a href="#">Ссылка 1</a>
+						<a href="#">Ссылка 2</a>
+						<a href="#">Ссылка 3</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+<!--		<div class="swiper">-->
+<!--			<div class="swiper-wrapper">-->
+<!--				<div class="swiper-slide">-->
+<!--					<div class="swiper-content">-->
+<!--						<a href="src/iron-man.html">-->
+<!--						<img class="swiper-img" src="img/iron_man.png" alt="">-->
+<!--						</a>-->
+<!--						<p class="swiper-content__text">Железный человек</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="swiper-slide">-->
+<!--					<div  class="swiper-content">-->
+<!--						<a href="src/jack-sparrow.html">-->
+<!--						<img class="swiper-img" src="img/jack_sparrow.jpg" alt="">-->
+<!--						</a>-->
+<!--						<p class="swiper-content__text">Джек Воробей</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="swiper-slide">-->
+<!--					<div class="swiper-content">-->
+<!--						<a href="src/terminator.html">-->
+<!--						<img class="swiper-img" src="img/terminator.jpg" alt="">-->
+<!--						</a>-->
+<!--						<p class="swiper-content__text">Терминатор</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="swiper-slide">-->
+<!--					<div class="swiper-content">-->
+<!--						<a href="src/gandalf.html">-->
+<!--						<img class="swiper-img" src="img/gandalf.png" alt="">-->
+<!--						</a>-->
+<!--						<p class="swiper-content__text">Гэндальф</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="swiper-slide">-->
+<!--					<div class="swiper-content">-->
+<!--						<a href="src/morpheus.html">-->
+<!--						<img class="swiper-img" src="img/morpheus.jpg" alt="">-->
+<!--						</a>-->
+<!--						<p class="swiper-content__text">Морфеус</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="swiper-slide">-->
+<!--					<div class="swiper-content">-->
+<!--						<a href="src/anakin-skywalker.html">-->
+<!--						<img class="swiper-img" src="img/anakin.png" alt="">-->
+<!--						</a>-->
+<!--						<p class="swiper-content__text">Энакин Скайуокер</p>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="swiper-button-next"></div>-->
+<!--			<div class="swiper-button-prev"></div>-->
+<!--		</div>-->
+
+<!--		<script type="module">-->
+<!--			import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'-->
+<!--			const swiper = new Swiper('.swiper', {-->
+<!--				slidesPerView: 5,-->
+<!--				spaceBetween: 30,-->
+<!--				loop: true,-->
+<!--				navigation: {-->
+<!--					nextEl: '.swiper-button-next',-->
+<!--					prevEl: '.swiper-button-prev',-->
+<!--				},-->
+<!--				speed: 600,-->
+<!--				autoplay: {-->
+<!--					delay: 5000,-->
+<!--					disableOnInteraction: true,-->
+<!--				},-->
+<!--			});-->
+<!--		</script>-->
+
+		<main class="main">
+			<div class="action-movie">
+				<p class="main__subheader">Боевики</p>
+				<div class="main-gallery">
+					<img src="img/iron_man.png">
+					<img src="img/terminator.jpg">
+					<img src="img/morpheus.jpg">
+				</div>
+			</div>
+			<div class="detective-movie">
+				<p class="main__subheader">Детективы</p>
+				<div class="main-gallery">
+					<img src="img/main-gallery/sh.jpg">
+					<img src="img/main-gallery/puaro.jpg">
+					<img src="img/main-gallery/Dr._John_Watson.png">
+				</div>
+			</div>
+			<div class="comedy-movie">
+				<p class="main__subheader">Комедии</p>
+				<div class="main-gallery">
+					<img src="img/main-gallery/mask.png">
+					<img src="img/main-gallery/home-alone.jpg">
+					<img src="img/main-gallery/ace.jpg">
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer-content">
+			</div>
+		</footer>
+
+	</body>
+</html>
