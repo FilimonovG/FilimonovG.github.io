@@ -1,0 +1,14 @@
+.genre__title{
+    font-weight: bold;
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+.genre__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__wrapper{
+    display: flex;
+}

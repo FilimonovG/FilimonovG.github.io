@@ -1,0 +1,57 @@
+.catalog{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: white;
+    width: 400px;
+    height: 100%;
+    transition: 0.4s;
+    z-index: 10;
+    padding: 20px;
+
+}
+
+.catalog.active{
+    left: 0;
+}
+
+.catalog__title{
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.catalog__items a:hover{
+    color: black;
+}
+
+.catalog__item{
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.catalog__item:hover{
+    background-color: var(--light-blue);
+}
+
+.shading{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -9;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.shading.active{
+    z-index: 9;
+    animation: shade 0.2s linear forwards;
+}
+
+@keyframes shade{
+    from {opacity: 0}
+    to {opacity: 0.5}
+}

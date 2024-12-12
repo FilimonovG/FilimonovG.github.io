@@ -1,0 +1,19 @@
+.footer{
+    height: 100px;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: var(--light-blue);
+}
+
+.footer__content{
+    height: 100%;
+    width: var(--main-width);
+    margin: 0 auto;
+    display: flex;
+    font-size: 14px;
+}
+
+.footer__text{
+    align-self: center;
+    opacity: 0.5;
+}
