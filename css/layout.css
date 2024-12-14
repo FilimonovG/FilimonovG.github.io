@@ -2,7 +2,7 @@
     --blue: #2c7edc;
     --dark-blue: #00499c;
     --light-blue: #ecf4fe;
-    --main-width: 1440px;
+    --main-width: 60%;
     --font-size: 24px;
 }
 
@@ -51,19 +51,25 @@ a:hover{
 
 .content{
     height: 100%;
-    padding: 10px;
+    padding: 20px 0;
     width: var(--main-width);
     margin: 0 auto;
 }
 
+@media screen and (min-width: 100px){
+    :root{
+        --main-width: 90%
+    }
+}
+
 @media screen and (min-width: 900px){
     :root{
-        --main-width: 1000px
+        --main-width: 80%
     }
 }
 
 @media screen and (min-width: 1400px){
     :root{
-        --main-width: 1440px
+        --main-width: 70%
     }
 }

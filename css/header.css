@@ -1,18 +1,17 @@
 .header{
     position: sticky;
-    min-height: 103px;
+    height: 103px;
     width: 100%;
     background-color: var(--blue);
     display: block;
 }
 
 .header__content{
-    height: 100%;
     width: var(--main-width);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 12px;
+    padding: 12px 0;
     gap: 10px;
 }
 
@@ -36,14 +35,20 @@
     display: flex;
 }
 
-.menu__item__title{
+.menu__item-value{
     color: white;
     margin-left: 5px;
     transition: 0.2s;
     align-self: center;
+    display: flex;
+    height: 100%;
 }
 
-.menu__item__title:hover{
+.menu__item-value svg{
+    align-self: center;
+}
+
+.menu__item-value:hover{
     opacity: 0.7;
 }
 

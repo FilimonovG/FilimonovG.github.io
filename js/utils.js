@@ -29,3 +29,29 @@ export function getAuthors(authors){
     }
     return res
 }
+
+export function cropDescription(description, num){
+    let text_arr = description.split(' ')
+    if (text_arr.length > num){
+        return text_arr.slice(0, num).join(' ') + ' ...'
+    }
+    return description
+}
+
+export function addToCart(book){
+    if (localStorage.getItem('cart')){
+        let cart = JSON.parse(localStorage.getItem('cart'))
+        if (!cart.find(item=>item.id === book.id)){
+            cart.push(book)
+            localStorage.setItem('cart', JSON.stringify(cart))
+        }
+    }
+    else {
+        localStorage.setItem('cart', JSON.stringify([book]))
+    }
+}
+
+export function clearCart(){
+    console.log('clear')
+    localStorage.removeItem('cart')
+}

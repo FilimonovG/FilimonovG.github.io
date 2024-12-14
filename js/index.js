@@ -1,41 +1,41 @@
-import {getRatingStars, getAuthors} from "./utils.js";
+import {getRatingStars, getAuthors, addToCart} from "./utils.js";
 
-function fillCard(card){
-    return `
-        <div class="card">
+function fillCard(book){
+
+    let card = document.createElement('div')
+    card.classList.add("card")
+
+    card.innerHTML = `
             <div class="card__image">
-                <a href="book.html?id=${card.id}">
-                    <img class="image__value" src=${card.img} alt="">
+                <a href="book.html?id=${book.id}">
+                    <img class="image__value" src=${book.img} alt="">
                 </a>
             </div>
             <div class="card__price">
-                <span class="price__value">
-                    ${card.price} ₽
-                </span>
+                <span class="price__value">${book.price} ₽</span>
             </div>
             <div class="card__title">
-                <a href="book.html?id=${card.id}">
-                    <span>
-                        ${card.title}
-                    </span>
+                <a href="book.html?id=${book.id}">
+                    <span>${book.title}</span>
                 </a>
             </div>
-            <div class="card__authors">
-                ${getAuthors(card.authors)}
-            </div>
+            <div class="card__authors">${getAuthors(book.authors)}</div>
             <div class="card__rating">
-                ${getRatingStars(card.rating)}
-                <span class='rating__value'>
-                    ${card.rating}
-                </span>
-                <span class='number_of_ratings__value'>
-                    (${card.number_of_ratings})
-                </span>
+                ${getRatingStars(book.rating)}
+                <span class='rating__value'>${book.rating}</span>
+                <span class='number_of_ratings__value'>(${book.number_of_ratings})</span>
             </div>
-            <button class="card__button-buy">Купить</button>
     `
-}
 
+    let btn = document.createElement('button')
+    btn.classList.add('card__button-buy')
+    btn.innerHTML = 'Купить'
+    btn.addEventListener('click', ()=>addToCart(book))
+
+    card.append(btn)
+
+    return card
+}
 
 async function fillSection(){
 
@@ -60,12 +60,13 @@ async function fillSection(){
         `
         let section_content = document.createElement('div')
         section_content.className = 'section__content'
+
         books.slice(0, 4).map(book=>{
             if (genre.id === book.genre.id){
-                let card = fillCard(book)
-                section_content.innerHTML += card
+                section_content.append(fillCard(book))
             }
         })
+
         section.append(section_content)
         content.append(section)
     })

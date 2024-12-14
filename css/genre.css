@@ -1,7 +1,22 @@
+.genre__header{
+    display: flex;
+    justify-content: space-between;
+}
+
 .genre__title{
     font-weight: bold;
     font-size: 32px;
-    margin: 20px 0;
+}
+
+.genre__sort{
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.sort__item{
+    background-color: white;
 }
 
 .genre__content{
@@ -9,6 +24,97 @@
     flex-direction: column;
 }
 
-.card__wrapper{
+.book__wrapper{
+    padding: 30px 0;
+    border-bottom: 1px solid #2c7edc;
+}
+
+.book{
     display: flex;
+}
+
+.book__image{
+    margin-right: 20px;
+}
+
+.image__value{
+    height: 300px;
+}
+
+.book__details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.book__title{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.authors__value{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.book__description{
+    margin: 20px 0;
+    flex: 1 0 auto;
+}
+
+.description__value{
+    white-space: pre-wrap;
+}
+
+.book__buy{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy__button{
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #2c7edc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buy__button:hover{
+    background-color: #00499c;
+}
+
+.book__price{
+    font-weight: bold;
+    font-size: 32px;
+    align-self: end;
+}
+
+.book__rating{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.rating__stars{
+    margin-right: 10px;
+}
+
+.rating__value{
+    margin-right: 10px;
+}
+
+.number-of-ratings__value{
+    opacity: 0.5;
+}
+
+.rating__star{
+    align-content: center;
+}
+
+.rating__star > svg{
+    height: 22px;
 }

@@ -1,4 +1,4 @@
-import {getRatingStars} from "./utils.js";
+import {addToCart, getRatingStars} from "./utils.js";
 import {getAuthors} from "./utils.js";
 
 function getAttributes(attributes) {
@@ -71,6 +71,7 @@ async function fillBook(params) {
     let description__value = document.querySelector('.description__value')
     let details__attributes = document.querySelector('.details__attributes')
     let reviews__content = document.querySelector('.reviews__content')
+    let details__button = document.querySelector('.details__button')
 
     book__title.innerHTML = book.title
     img__value.src = book.img
@@ -91,6 +92,8 @@ async function fillBook(params) {
     details__rating.append(number_of_ratings)
     details__attributes.innerHTML = getAttributes(book.attributes)
     reviews__content.innerHTML = getReviews(book.reviews)
+
+    details__button.addEventListener('click', ()=>addToCart(book))
 }
 
 function onLoad() {
