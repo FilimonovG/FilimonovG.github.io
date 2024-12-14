@@ -1,6 +1,7 @@
 :root{
     --blue: #2c7edc;
     --dark-blue: #00499c;
+    --darkest-blue: #003169;
     --light-blue: #ecf4fe;
     --main-width: 60%;
     --font-size: 24px;
@@ -64,7 +65,7 @@ a:hover{
 
 @media screen and (min-width: 900px){
     :root{
-        --main-width: 80%
+        --main-width: 90%
     }
 }
 

@@ -1,3 +1,5 @@
+import {setCartQuantity} from "./utils.js";
+
 function configureCatalog(){
     let catalog = document.querySelector('.catalog')
     let catalog_btn = document.querySelector('.catalog__button')
@@ -30,6 +32,7 @@ async function fillCatalog(){
 }
 
 function onLoad(){
+    setCartQuantity()
     configureCatalog()
     fillCatalog()
 }

@@ -1,4 +1,50 @@
-import {clearCart, getAuthors} from "./utils.js";
+import {clearCart, getAuthors, setCartQuantity} from "./utils.js";
+
+function updateDetails(){
+
+    setCartQuantity()
+
+    const cart__wrapper = document.querySelector('.cart__wrapper')
+
+    if (!localStorage.getItem('cart') || JSON.parse(localStorage.getItem('cart')).length === 0){
+        cart__wrapper.innerHTML = 'Корзина пуста'
+        return
+    }
+
+    let total = 0
+    for (let el of document.querySelectorAll('.item__total')){
+        total += Number(el.innerHTML.trim().split(' ')[0])
+    }
+    document.querySelector('.total-price.value').innerHTML = total + ' ₽'
+
+    let products_amount = 0
+    for (let el of document.querySelectorAll('.quantity')){
+        products_amount += Number(el.innerHTML.trim()[0])
+    }
+
+    document.querySelector('.products__amount').innerHTML = products_amount
+}
+
+function changeQuantity(cart__item, num){
+    let quantity = cart__item.querySelector('.quantity')
+    let item__total = cart__item.querySelector('.item__total')
+    let item__price = cart__item.querySelector('.item__price')
+
+    quantity.innerHTML = Number(quantity.innerHTML) + num
+    item__total.innerHTML = Number(item__price.innerHTML.split(' ')[0]) * Number(quantity.innerHTML) + ' ₽'
+
+    let decrease__button = cart__item.querySelector('.counter__button.remove')
+    if (Number(quantity.innerHTML) > 1){
+        decrease__button.classList.remove('disabled')
+        decrease__button.disabled = false
+    }
+    else {
+        decrease__button.classList.add('disabled')
+        decrease__button.disabled = true
+    }
+
+    updateDetails()
+}
 
 function fillItem(book){
     let cart__item = document.createElement("div")
@@ -41,8 +87,12 @@ function fillItem(book){
         let cart = JSON.parse(localStorage.getItem('cart'))
         cart.pop(book)
         localStorage.setItem('cart', JSON.stringify(cart))
-        fillCart()
+        cart__item.remove()
+        updateDetails()
     });
+
+    cart__item.querySelector('.counter__button.remove').addEventListener('click', ()=>changeQuantity(cart__item, -1))
+    cart__item.querySelector('.counter__button.add').addEventListener('click', ()=>changeQuantity(cart__item, 1))
 
     return cart__item
 }
@@ -59,7 +109,10 @@ function fillCart(){
     const books = JSON.parse(localStorage.getItem('cart'))
 
     const cart__clear = document.querySelector('.cart__clear')
-    cart__clear.addEventListener('click', clearCart)
+    cart__clear.addEventListener('click', ()=>{
+        clearCart()
+        updateDetails()
+    })
 
     const cart__items = document.querySelector('.cart__items')
     cart__items.innerHTML = ''
@@ -67,18 +120,7 @@ function fillCart(){
         cart__items.append(fillItem(book))
     })
 
-    let total = 0
-    for (let el of document.querySelectorAll('.item__total')){
-        total += Number(el.innerHTML.trim().split(' ')[0])
-    }
-    document.querySelector('.total-price.value').innerHTML = total + ' ₽'
-
-    let products_amount = 0
-    for (let el of document.querySelectorAll('.quantity')){
-        products_amount += Number(el.innerHTML.trim()[0])
-    }
-
-    document.querySelector('.products__amount').innerHTML = products_amount
+    updateDetails()
 
 }
 

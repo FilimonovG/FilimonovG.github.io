@@ -70,7 +70,11 @@
 }
 
 .card__button-buy:hover{
-    background-color: #00499c;
+    background-color: var(--dark-blue);
+}
+
+.card__button-buy:active{
+    background-color: var(--darkest-blue);
 }
 
 .card__link{

@@ -49,9 +49,20 @@ export function addToCart(book){
     else {
         localStorage.setItem('cart', JSON.stringify([book]))
     }
+    setCartQuantity()
 }
 
 export function clearCart(){
-    console.log('clear')
     localStorage.removeItem('cart')
+    setCartQuantity()
+}
+
+export function setCartQuantity(){
+    const cart_quantity = document.getElementById('cart_quantity')
+    if (localStorage.getItem('cart') && JSON.parse(localStorage.getItem('cart')).length > 0){
+        cart_quantity.innerHTML = JSON.parse(localStorage.getItem('cart')).length
+    }else {
+        cart_quantity.innerHTML = 0
+    }
+    cart_quantity.hidden = Number(cart_quantity.innerHTML) <= 0;
 }
