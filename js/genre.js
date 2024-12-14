@@ -36,7 +36,7 @@ function fillBook(book){
                                     </div>
                                     <div class="book__buy">
                                         <span class="book__price">${book.price} ₽</span>
-                                        <button class="buy__button">Купить</button>
+                                        <button class="button buy__button">Купить</button>
                                     </div>
                                 </div>
                             </div>
@@ -47,13 +47,17 @@ function fillBook(book){
 }
 
 function fillPage(){
-    let genre__title = document.querySelector('.genre__title')
+
     let content = document.querySelector('.genre__content')
+
+    if (genre_books.length === 0){
+        content.innerHTML = 'Книг этого жанра нет'
+        return
+    }
 
     content.innerHTML = ''
 
     genre_books.map(book=>{
-        genre__title.innerHTML = book.genre.title
         content.append(fillBook(book))
     })
 }
@@ -82,6 +86,10 @@ async function onLoad(){
     id = location.search.split("=")[1]
     books = await (await fetch("../books.json")).json()
     genre_books = books.filter(book => book.genre.id === Number(id))
+
+    let genres = await (await fetch("../genres.json")).json()
+    let genre__title = document.querySelector('.genre__title')
+    genre__title.innerHTML = genres.find(genre=>genre.id === Number(id)).title
 
     document.getElementById('sort_by_rating').addEventListener('click', sortByRating)
     document.getElementById('sort_by_review').addEventListener('click', sortByReview)

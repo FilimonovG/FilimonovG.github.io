@@ -20,11 +20,25 @@ html,body{
     font-family: Inter, sans-serif;
 }
 
-button{
+.button{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #2c7edc;
     border: none;
     border-radius: 5px;
-    transition: 0.2s;
     cursor: pointer;
+    transition: 0.2s;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.button:hover{
+    background-color: var(--dark-blue);
+}
+
+.button:active{
+    background-color: var(--darkest-blue);
 }
 
 a{
@@ -48,6 +62,7 @@ a:hover{
     flex: 1 0 auto;
     background-color: white;
     position: relative;
+    z-index: 1;
 }
 
 .content{
@@ -71,6 +86,6 @@ a:hover{
 
 @media screen and (min-width: 1400px){
     :root{
-        --main-width: 70%
+        --main-width: 50%
     }
 }

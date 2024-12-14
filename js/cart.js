@@ -61,7 +61,7 @@ function fillItem(book){
                                         <a href="book.html?id=${book.id}">${book.title}</a>
                                     </div>
                                     <div class="item__authors">
-                                        <a href="cart.html">${getAuthors(book.authors)}</a>
+                                        ${getAuthors(book.authors)}
                                     </div>
                                     <div class="item__price">${book.price} ₽/шт.</div>
                                 </div>

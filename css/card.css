@@ -45,36 +45,13 @@
 .card__authors{
     margin-bottom: 20px;
     font-size: 16px;
-    opacity: 0.5;
     flex: 1;
+    color: #999;
 }
 
 .number_of_ratings__value{
     margin-left: 4px;
     opacity: 0.5;
-}
-
-.authors__value a{
-    color: black;
-}
-
-.card__button-buy{
-    color: white;
-    font-size: 20px;
-    padding: 10px;
-    background-color: #2c7edc;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.card__button-buy:hover{
-    background-color: var(--dark-blue);
-}
-
-.card__button-buy:active{
-    background-color: var(--darkest-blue);
 }
 
 .card__link{

@@ -19,13 +19,7 @@ export function getRatingStars(rating){
 export function getAuthors(authors){
     let res = ''
     for (let author of authors){
-        res += `
-            <a href="author.html?id=${author.id}">
-                <span>
-                    ${author.name}
-                </span>
-            </a>
-        `
+        res += `<span>${author.name}</span>`
     }
     return res
 }

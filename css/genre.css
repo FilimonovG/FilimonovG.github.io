@@ -73,18 +73,7 @@
 }
 
 .buy__button{
-    color: white;
-    font-size: 20px;
     padding: 10px 20px;
-    background-color: #2c7edc;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.buy__button:hover{
-    background-color: #00499c;
 }
 
 .book__price{

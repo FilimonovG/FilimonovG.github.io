@@ -24,8 +24,9 @@ function getAttributes(attributes) {
 
 function getReviews(reviews) {
     let res = ''
-    for (let review of reviews) {
-        res += `
+    if (reviews.length > 0) {
+        for (let review of reviews) {
+            res += `
         <div class="review">
             <div class="review__author">
                 <span class="author__text">
@@ -53,6 +54,9 @@ function getReviews(reviews) {
             </div>
         </div>        
         `
+        }
+    }else {
+        res = 'Отзывов нет'
     }
     return res
 }
@@ -72,6 +76,7 @@ async function fillBook(params) {
     let details__attributes = document.querySelector('.details__attributes')
     let reviews__content = document.querySelector('.reviews__content')
     let details__button = document.querySelector('.details__button')
+    let genre__value = document.querySelector('.genre__value')
 
     book__title.innerHTML = book.title
     img__value.src = book.img
@@ -79,6 +84,9 @@ async function fillBook(params) {
     description__value.innerHTML = book.description
     book__authors.innerHTML = getAuthors(book.authors)
     details__rating.innerHTML = getRatingStars(book.rating)
+    genre__value.innerHTML = `
+    <a href="genre.html?id=${book.genre.id}">${book.genre.title}</a>
+    `
 
     let rating__value = document.createElement('span')
     rating__value.classList.add('rating__value')
