@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/catalog.css">
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/auth.css">
     <script src="../js/header.js"></script>
-    <script type="module" src="../js/cart.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -86,58 +85,39 @@
         </div>
         <div class="shading"></div>
         <div class="content">
-            <!--Заполняется автоматически-->
-            <div class="cart__wrapper">
-                <div class="cart">
-                    <div class="cart__header">
+            <div class="auth__wrapper">
+                <div class="auth">
+                    <div class="auth__block">
+                        <div class="auth__header">
                         <span>
-                            Корзина
+                            Вход
                         </span>
-                        <div class="cart__clear">
-                            <svg data-v-7a84296f="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" alt="clear-cart" class="icon"><path data-v-7a84296f="" d="M17 19V8H7v11h10z" stroke="#2C7EDC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path data-v-7a84296f="" d="M6 8h12" stroke="#2C7EDC" stroke-width="1.5" stroke-linecap="round"></path><path data-v-7a84296f="" d="M10 8V7a2 2 0 012-2v0a2 2 0 012 2v1" stroke="#2C7EDC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                            <span>Очистить корзину</span>
+                        </div>
+                        <div class="auth__content">
+                            <form action="index.html">
+                                <div class="auth__field">
+                                    <p class="field__header">
+                                        E-mail
+                                    </p>
+                                    <input class="field__input" type="email" required>
+                                </div>
+                                <div class="auth__field">
+                                    <p class="field__header">
+                                        Пароль
+                                    </p>
+                                    <input class="field__input" type="password" required>
+                                </div>
+                                <div class="auth__field">
+                                    <button class="auth__button" type="submit">
+                                        Войти
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <div class="cart__content">
-                        <div class="cart__items">
-                            <!--Заполняется автоматически-->
-                        </div>
-                    </div>
-                </div>
-                <div class="cart__total">
-                    <div class="total__header">
-                        <span>
-                            Детали заказа
-                        </span>
-                    </div>
-                    <div class="total__row">
-                        <span>
-                            Кол-во товаров
-                        </span>
-                        <span class="products__amount">
-
-                        </span>
-                    </div>
-                    <div class="total__row">
-                        <span>
-                            Скидка
-                        </span>
-                        <span class="discount__value">
-                            0 ₽
-                        </span>
-                    </div>
-                    <div class="total__row">
-                        <span class="total-price">
-                            Итого
-                        </span>
-                        <span class="total-price value">
-
-                        </span>
-                    </div>
-                    <div class="total__row">
-                        <button class="buy__button">
-                            Перейти к оформлению
-                        </button>
+                    <div class="auth__block">
+                        <span>Ещё нет аккаунта? </span>
+                        <a class="registration-link" href="registration.html">Зарегистрируйтесь</a>
                     </div>
                 </div>
             </div>
@@ -146,7 +126,7 @@
     <footer class="footer">
         <div class="footer__content">
             <p class="footer__text">
-                © 2024 Книжный магазин
+                ИКБО-30-22 Филимонов Георгий
             </p>
         </div>
     </footer>
