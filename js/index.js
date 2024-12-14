@@ -7,7 +7,7 @@ function fillCard(book){
 
     card.innerHTML = `
             <div class="card__image">
-                <a href="book.html?id=${book.id}">
+                <a href="html/book.html?id=${book.id}">
                     <img class="image__value" src=${book.img} alt="">
                 </a>
             </div>
@@ -15,7 +15,7 @@ function fillCard(book){
                 <span class="price__value">${book.price} ₽</span>
             </div>
             <div class="card__title">
-                <a href="book.html?id=${book.id}">
+                <a href="html/book.html?id=${book.id}">
                     <span>${book.title}</span>
                 </a>
             </div>
@@ -46,7 +46,7 @@ async function fillSection(){
             section.className = 'section'
             section.innerHTML = `
                 <div class="section__title">
-                    <a class="section__title-link" href="genre.html?id=${genre.id}">${genre.title}</a>
+                    <a class="section__title-link" href="html/genre.html?id=${genre.id}">${genre.title}</a>
                 </div>
             `
             let section_content = document.createElement('div')

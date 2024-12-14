@@ -10,7 +10,7 @@ function searchEngine(input) {
     if (input !== '') {
         books.filter(book=>book.title.toLowerCase().includes(input.toLowerCase())).map(book=>{
             search__results.innerHTML += `
-            <a class="search__result" href="book.html?id=${book.id}">${book.title}</a>
+            <a class="search__result" href="/html/book.html?id=${book.id}">${book.title}</a>
         `
         })
 
