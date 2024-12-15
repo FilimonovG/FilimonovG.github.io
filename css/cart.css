@@ -104,6 +104,8 @@
     cursor: pointer;
     transition: 0.2s;
     display: flex;
+    align-self: end;
+
 }
 
 .clear__item > *{
@@ -171,6 +173,5 @@
     }
     .clear__item{
         width: fit-content;
-        align-self: end;
     }
 }
