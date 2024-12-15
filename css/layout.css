@@ -4,7 +4,10 @@
     --darkest-blue: #003169;
     --light-blue: #ecf4fe;
     --main-width: 60%;
-    --font-size: 24px;
+    --small-font-size: 16px;
+    --font-size: 20px;
+    --nav-fon-size: 24px;
+    --hedear-font-size: 32px;
 }
 
 *{
@@ -74,18 +77,27 @@ a:hover{
 
 @media screen and (min-width: 100px){
     :root{
-        --main-width: 90%
+        --main-width: 90%;
+        --small-font-size: 16px;
+        --font-size: 24px;
+        --hedear-font-size: 32px;
     }
 }
 
-@media screen and (min-width: 900px){
+@media screen and  (min-width: 900px){
     :root{
-        --main-width: 90%
+        --main-width: 90%;
+        --small-font-size: 16px;
+        --font-size: 24px;
+        --hedear-font-size: 32px;
     }
 }
 
 @media screen and (min-width: 1400px){
     :root{
-        --main-width: 50%
+        --main-width: 50%;
+        --small-font-size: 16px;
+        --font-size: 20px;
+        --hedear-font-size: 32px;
     }
 }

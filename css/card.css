@@ -1,7 +1,8 @@
 .card{
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
-    width: 200px;
+    min-width: 240px;
 }
 
 .card__image{
@@ -9,7 +10,7 @@
 }
 
 .image__value{
-    height: 300px;
+    width: 100%;
 }
 
 .card__price{
@@ -44,7 +45,7 @@
 
 .card__authors{
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: var(--small-font-size);
     flex: 1;
     color: #999;
 }
@@ -57,4 +58,37 @@
 .card__link{
     text-decoration: none;
     color: black;
+}
+
+@media screen and (min-width: 100px){
+    .card{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .card{
+        width: 25%;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .card{
+        width: 25%;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (min-width: 1400px){
+    .card{
+        width: 25%;
+        margin-bottom: 0;
+        padding: 0 1rem;
+
+    }
 }

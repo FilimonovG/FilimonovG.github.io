@@ -92,12 +92,17 @@
                         <p class="genre__title">
                             <!--Заполняется автоматически-->
                         </p>
-                        <select name="sort" class="genre__sort">
-                            <option class="sort__item" id="sort_by_rating">По рейтингу</option>
-                            <option class="sort__item" id="sort_by_review">По отзывам</option>
-                            <option class="sort__item" id="sort_by_name">По названию от (А до Я)</option>
-                            <option class="sort__item" id="sort_by_name_reverse">По названию от (Я до А)</option>
-                        </select>
+                        <div class="sort">
+                            <div id="sort__value">
+                                <span>По рейтингу</span>
+                            </div>
+                            <div class="sort__items">
+                                <div class="sort__item" id="sort_by_rating">По рейтингу</div>
+                                <div class="sort__item" id="sort_by_review">По отзывам</div>
+                                <div class="sort__item" id="sort_by_name">По названию от (А до Я)</div>
+                                <div class="sort__item" id="sort_by_name_reverse">По названию от (Я до А)</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="genre__content">
                         <!--Заполняется автоматически-->
