@@ -13,8 +13,8 @@
     flex-wrap: wrap;
 }
 
-@media screen and (min-width: 900px){
-    .section__content{
-
+@media screen and (max-width: 500px){
+    .section__title{
+        margin: 10px 0;
     }
 }

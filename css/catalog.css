@@ -56,3 +56,13 @@
     from {opacity: 0}
     to {opacity: 0.5}
 }
+
+@media screen and (max-width: 700px){
+    .catalog.active{
+        left: 0;
+        width: 100%;
+    }
+    .catalog__title{
+        margin-bottom: 5px;
+    }
+}

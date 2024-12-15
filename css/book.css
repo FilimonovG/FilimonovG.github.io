@@ -3,13 +3,13 @@
 }
 
 .book__title{
-    font-size: 30px;
+    font-size: var(--hedear-font-size);
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .book__authors{
-    font-size: 18px;
+    font-size: var(--small-font-size);
     color: var(--blue);
 }
 
@@ -23,11 +23,12 @@
 }
 
 .img__value{
-    height: 400px;
+    max-height: 400px;
+    height: 100%;
 }
 
 .description__value{
-    font-size: 18px;
+    font-size: var(--small-font-size);
     white-space: pre-wrap;
     margin-bottom: 40px;
 }
@@ -44,12 +45,12 @@
 }
 
 .attributes__col{
-    font-size: 18px;
+    font-size: var(--small-font-size);
     flex: 1;
 }
 
 .attributes__text{
-    font-size: 16px;
+    font-size: var(--small-font-size);
 }
 
 .genre__value{
@@ -63,7 +64,7 @@
 }
 
 .details__price{
-    font-size: 30px;
+    font-size: var(--hedear-font-size);
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -80,6 +81,11 @@
 .rating__star{
     height: 30px;
     width: 30px;
+    display: flex;
+}
+
+.rating__star svg{
+    align-self: center;
 }
 
 .details__button{
@@ -91,7 +97,7 @@
 }
 
 .reviews__header{
-    font-size: 36px;
+    font-size: var(--hedear-font-size);
     font-weight: bold;
     margin: 20px 0;
     display: flex;
@@ -105,7 +111,7 @@
 }
 
 .review__header{
-    font-size: 22px;
+    font-size: var(--font-size);
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -117,7 +123,7 @@
 }
 
 .author__text{
-    font-size: 18px;
+    font-size: var(--small-font-size);;
     opacity: 0.5;
 }
 
@@ -125,13 +131,8 @@
     height: 24px;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: var(--font-size);
     margin-bottom: 20px;
-}
-
-.review__star{
-    height: 24px;
-    width: 24px;
 }
 
 .review-rating__value{
@@ -140,4 +141,30 @@
 
 .review__button{
     width: 20%;
+}
+
+@media screen and (max-width: 900px){
+    .details__col.book{
+        width: 200px;
+    }
+    .img__value{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .book__details{
+        flex-direction: column;
+    }
+    .details__col.book{
+        margin-bottom: 10px;
+        width: 260px;
+        margin-right: 0;
+    }
+    .img__value{
+        height: 400px;
+    }
+    .rating__star svg{
+        height: 20px;
+    }
 }

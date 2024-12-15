@@ -25,7 +25,7 @@ html,body{
 
 .button{
     color: white;
-    font-size: 20px;
+    font-size: var(--font-size);
     padding: 10px;
     background-color: #2c7edc;
     border: none;
@@ -73,6 +73,7 @@ a:hover{
     padding: 20px 0;
     width: var(--main-width);
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 1200px) {
@@ -98,10 +99,10 @@ a:hover{
 @media screen and (max-width: 767px) {
     :root{
         --main-width: 90%;
-        --small-font-size: 20px;
-        --font-size: 24px;
-        --nav-fon-size: 32px;
-        --hedear-font-size: 40px;
+        --small-font-size: 16px;
+        --font-size: 20px;
+        --nav-fon-size: 24px;
+        --hedear-font-size: 32px;
     }
 }
 
@@ -110,7 +111,7 @@ a:hover{
         --main-width: 90%;
         --small-font-size: 16px;
         --font-size: 20px;
-        --nav-fon-size: 20px;
+        --nav-fon-size: 24px;
         --hedear-font-size: 28px;
     }
 }
@@ -118,9 +119,9 @@ a:hover{
 @media screen and (max-width: 400px) {
     :root{
         --main-width: 90%;
-        --small-font-size: 16px;
-        --font-size: 20px;
-        --nav-fon-size: 16px;
+        --small-font-size: 12px;
+        --font-size: 14px;
+        --nav-fon-size: 24px;
         --hedear-font-size: 20px;
     }
 }

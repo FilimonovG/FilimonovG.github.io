@@ -2,7 +2,6 @@
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    min-width: 220px;
     padding: 0 1rem;
     width: 25%;
 }
@@ -32,7 +31,7 @@
 .card__rating{
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: var(--small-font-size);
     margin-bottom: 10px;
     justify-content: space-between;
 }
@@ -70,7 +69,7 @@
 
 @media screen and (max-width: 992px) {
     .card{
-        width: 25%;
+        width: 50%;
         margin-bottom: 30px;
     }
 }
@@ -84,7 +83,10 @@
 
 @media screen and (max-width: 500px) {
     .card{
-        width: 100%;
+        width: 50%;
         margin-bottom: 30px;
+    }
+    .rating__star svg{
+        height: 16px;
     }
 }

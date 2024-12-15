@@ -63,7 +63,7 @@
 }
 
 .item__authors{
-    font-size: 18px;
+    font-size: var(--small-font-size);
     color: #999999;
 }
 
@@ -126,21 +126,54 @@
     padding: 30px 40px;
     background-color: var(--light-blue);
     font-size: var(--font-size);
-    max-height: 200px;
+    max-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 .total__row{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .total__header{
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .total-price{
     font-weight: bold;
+}
+
+@media screen and (max-width: 900px){
+    .cart__wrapper{
+        flex-direction: column;
+    }
+    .cart__total{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .image__value{
+        height: 100px;
+    }
+    .counter__button{
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+    .item__total{
+        font-size: var(--font-size);
+    }
+    .clear__item span{
+        display: none;
+    }
+    .clear__item{
+        width: fit-content;
+        align-self: end;
+    }
 }
