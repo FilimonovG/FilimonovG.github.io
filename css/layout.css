@@ -95,9 +95,28 @@ a:hover{
 
 @media screen and (min-width: 1400px){
     :root{
-        --main-width: 50%;
+        --main-width: 70%;
         --small-font-size: 16px;
         --font-size: 20px;
         --hedear-font-size: 32px;
     }
 }
+
+@media screen and (min-width: 1600px){
+    :root{
+        --main-width: 60%;
+        --small-font-size: 16px;
+        --font-size: 20px;
+        --hedear-font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    :root{
+        --main-width: 60%;
+        --small-font-size: 16px;
+        --font-size: 20px;
+        --hedear-font-size: 32px;
+    }
+}
+

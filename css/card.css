@@ -2,7 +2,8 @@
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
-    min-width: 240px;
+    min-width: 220px;
+    padding: 0 1rem;
 }
 
 .card__image{
@@ -67,10 +68,16 @@
     }
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 500px){
+    .card{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px){
     .card{
         width: 25%;
-        padding: 0 10px;
         margin-bottom: 30px;
     }
 }
@@ -78,7 +85,6 @@
 @media screen and (min-width: 1200px){
     .card{
         width: 25%;
-        padding: 0 10px;
         margin-bottom: 30px;
     }
 }
@@ -88,7 +94,5 @@
     .card{
         width: 25%;
         margin-bottom: 0;
-        padding: 0 1rem;
-
     }
 }
