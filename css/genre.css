@@ -5,12 +5,12 @@
 
 .genre__title{
     font-weight: bold;
-    font-size: 32px;
+    font-size: var(--hedear-font-size);
 }
 
 .sort{
     position: relative;
-    font-size: 16px;
+    font-size: var(--small-font-size);
     min-width: 240px;
 }
 
@@ -96,13 +96,13 @@
 }
 
 .book__title{
-    font-size: 32px;
+    font-size: var(--hedear-font-size);
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .authors__value{
-    font-size: 20px;
+    font-size: var(--font-size);
     margin-bottom: 10px;
 }
 
@@ -126,7 +126,7 @@
 
 .book__price{
     font-weight: bold;
-    font-size: 32px;
+    font-size: var(--hedear-font-size);
     align-self: end;
 }
 

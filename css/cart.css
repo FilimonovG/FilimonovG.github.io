@@ -9,14 +9,14 @@
 
 .cart__header{
     font-weight: bold;
-    font-size: 32px;
+    font-size: var(--hedear-font-size);
     display: flex;
     justify-content: space-between;
 }
 
 .cart__clear{
     font-weight: normal;
-    font-size: 16px;
+    font-size: var(--small-font-size);
     color: var(--blue);
     cursor: pointer;
     transition: 0.2s;
@@ -74,7 +74,7 @@
 .counter__button{
     background-color: white;
     border: 1px solid #aaaaaa;
-    font-size: 20px;
+    font-size: var(--font-size);
     width: 32px;
     height: 32px;
     color: black;
@@ -102,7 +102,7 @@
 }
 
 .clear__item{
-    font-size: 16px;
+    font-size: var(--small-font-size);
     color: var(--blue);
     cursor: pointer;
     transition: 0.2s;
@@ -115,7 +115,7 @@
 
 .item__total{
     align-self: end;
-    font-size: 32px;
+    font-size: var(--hedear-font-size);
 }
 
 .clear__item:hover{
@@ -125,7 +125,7 @@
 .cart__total{
     padding: 30px 40px;
     background-color: var(--light-blue);
-    font-size: 20px;
+    font-size: var(--font-size);
     max-height: 200px;
     display: flex;
     flex-direction: column;

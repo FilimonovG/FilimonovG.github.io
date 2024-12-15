@@ -18,7 +18,7 @@
 
 .catalog__title{
     font-weight: bold;
-    font-size: 32px;
+    font-size: var(--hedear-font-size);
     margin-bottom: 20px;
     margin-left: 20px;
 }

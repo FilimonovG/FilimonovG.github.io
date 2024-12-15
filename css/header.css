@@ -129,3 +129,14 @@
     background-color: var(--light-blue);
 }
 
+@media screen and (min-width: 100px){
+    .header{
+        height: 10%;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .header{
+        height: 10%;
+    }
+}
