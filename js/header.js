@@ -48,7 +48,7 @@ async function fillCatalog(){
     let catalog = document.querySelector('.catalog__items')
     genres.map(genre=>{
         catalog.innerHTML += `
-            <a href="genre.html?id=${genre.id}">
+            <a href="/html/genre.html?id=${genre.id}">
                 <div class="catalog__item">
                     <span>${genre.title}</span>
                 </div>
