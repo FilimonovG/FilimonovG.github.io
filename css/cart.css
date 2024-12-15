@@ -148,6 +148,21 @@
     font-weight: bold;
 }
 
+@media screen and (max-width: 1600px){
+    :root{
+        --main-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    :root{
+        --main-width: 90%;
+    }
+    .cart__total{
+        padding: 20px 30px;
+    }
+}
+
 @media screen and (max-width: 900px){
     .cart__wrapper{
         flex-direction: column;
