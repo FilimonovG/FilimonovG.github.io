@@ -4,6 +4,7 @@
 
 .cart{
     margin-right: 5%;
+    flex: 1;
 }
 
 .cart__header{
