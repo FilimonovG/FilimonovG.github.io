@@ -75,19 +75,9 @@ a:hover{
     margin: 0 auto;
 }
 
-@media screen and (min-width: 100px){
+@media screen and (max-width: 1200px) {
     :root{
-        --main-width: 90%;
-        --small-font-size: 20px;
-        --font-size: 24px;
-        --nav-fon-size: 32px;
-        --hedear-font-size: 40px;
-    }
-}
-
-@media screen and  (min-width: 900px){
-    :root{
-        --main-width: 90%;
+        --main-width: 60%;
         --small-font-size: 16px;
         --font-size: 20px;
         --nav-fon-size: 24px;
@@ -95,7 +85,7 @@ a:hover{
     }
 }
 
-@media screen and (min-width: 1400px){
+@media screen and (max-width: 992px) {
     :root{
         --main-width: 70%;
         --small-font-size: 16px;
@@ -105,23 +95,32 @@ a:hover{
     }
 }
 
-@media screen and (min-width: 1600px){
+@media screen and (max-width: 767px) {
     :root{
-        --main-width: 60%;
-        --small-font-size: 16px;
-        --font-size: 20px;
-        --nav-fon-size: 24px;
-        --hedear-font-size: 32px;
+        --main-width: 90%;
+        --small-font-size: 20px;
+        --font-size: 24px;
+        --nav-fon-size: 32px;
+        --hedear-font-size: 40px;
     }
 }
 
-@media screen and (min-width: 2000px){
+@media screen and (max-width: 600px) {
     :root{
-        --main-width: 60%;
+        --main-width: 90%;
         --small-font-size: 16px;
         --font-size: 20px;
-        --nav-fon-size: 24px;
-        --hedear-font-size: 32px;
+        --nav-fon-size: 20px;
+        --hedear-font-size: 28px;
     }
 }
 
+@media screen and (max-width: 400px) {
+    :root{
+        --main-width: 90%;
+        --small-font-size: 16px;
+        --font-size: 20px;
+        --nav-fon-size: 16px;
+        --hedear-font-size: 20px;
+    }
+}
