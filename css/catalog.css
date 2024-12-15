@@ -18,7 +18,7 @@
 
 .catalog__title{
     font-weight: bold;
-    font-size: var(--hedear-font-size);
+    font-size: 30px;
     margin-bottom: 20px;
     margin-left: 20px;
 }
@@ -30,6 +30,7 @@
 .catalog__item{
     padding: 20px;
     border-radius: 5px;
+    font-size: 20px;
 }
 
 .catalog__item:hover{
