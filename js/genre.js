@@ -64,28 +64,28 @@ function fillPage(){
 
 function sortByRating(){
     document.getElementById('sort__value').innerHTML = 'По рейтингу'
-    genre_books.sort((a,b)=>a.rating < b.rating)
+    genre_books.sort((a,b)=>b.rating - a.rating)
     toggleSort()
     fillPage()
 }
 
 function sortByReview(){
     document.getElementById('sort__value').innerHTML = 'По отзывам'
-    genre_books.sort((a,b)=>a.number_of_ratings < b.number_of_ratings)
+    genre_books.sort((a,b)=>b.number_of_ratings - a.number_of_ratings)
     toggleSort()
     fillPage()
 }
 
 function sortByName(){
     document.getElementById('sort__value').innerHTML = 'По названию от (А до Я)'
-    genre_books.sort((a,b)=>a.title > b.title)
+    genre_books.sort((a,b)=>a.title.localeCompare(b.title))
     toggleSort()
     fillPage()
 }
 
 function sortByNameReverse(){
     document.getElementById('sort__value').innerHTML = 'По названию от (Я до А)'
-    genre_books.sort((a,b)=>a.title < b.title)
+    genre_books.sort((a,b)=>b.title.localeCompare(a.title))
     toggleSort()
     fillPage()
 }
@@ -95,23 +95,25 @@ function toggleSort(){
     sort__items.style.display = sort__items.style.display === 'block' ? 'none' : 'block';
 }
 
-async function onLoad(){
-    id = location.search.split("=")[1]
-    books = await (await fetch("../books.json")).json()
+function configureSelect(){
     genre_books = books.filter(book => book.genre.id === Number(id))
-    genre_books.sort((a,b)=>a.rating < b.rating)
-
-    let genres = await (await fetch("../genres.json")).json()
-    let genre__title = document.querySelector('.genre__title')
-    genre__title.innerHTML = genres.find(genre=>genre.id === Number(id)).title
-
+    genre_books.sort((a,b)=>b.rating - a.rating)
     document.getElementById('sort__value').addEventListener('click', toggleSort)
     document.getElementById('sort_by_rating').addEventListener('click', sortByRating)
     document.getElementById('sort_by_review').addEventListener('click', sortByReview)
     document.getElementById('sort_by_name').addEventListener('click', sortByName)
     document.getElementById('sort_by_name_reverse').addEventListener('click', sortByNameReverse)
+}
 
+async function onLoad(){
+    id = location.search.split("=")[1]
+    books = await (await fetch("../books.json")).json()
 
+    let genres = await (await fetch("../genres.json")).json()
+    let genre__title = document.querySelector('.genre__title')
+    genre__title.innerHTML = genres.find(genre=>genre.id === Number(id)).title
+
+    configureSelect()
     fillPage()
 }
 
